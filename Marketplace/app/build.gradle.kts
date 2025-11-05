@@ -4,7 +4,7 @@ plugins {
     id("com.google.gms.google-services")
 }
 android {
-    namespace = "com.diegodev.marketplace"
+    namespace = "com.myapplication.marketplace"
     compileSdk = 36
     defaultConfig {
         applicationId = "com.diegodev.marketplace"
