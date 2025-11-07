@@ -27,7 +27,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:paddingBottom="56dp"
         android:clipToPadding="false"
-        tools:listitem="@layout/activity_item_producto"/>
+        tools:listitem="@layout/item_producto"/>
     <!-- 3. Barra de Navegación Inferior (Mismo ID que en Home y Cuenta) -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"

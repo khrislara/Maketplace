@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalleProductoActivity">
+    tools:context=".Detalle_Producto">
     <!-- AppBarLayout con Toolbar para el botón de retroceso -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -149,8 +149,7 @@ contenido -->
     </androidx.core.widget.NestedScrollView>
     <!-- Botón Flotante para Contactar al Vendedor (fixed position) -->
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionBut
-        ton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab_contactar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

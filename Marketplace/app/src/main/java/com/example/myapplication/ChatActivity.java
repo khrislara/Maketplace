@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,10 +8,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.diegodev.marketplace.adapter.MensajeAdapter;
-import com.diegodev.marketplace.model.Mensaje;
+import com.example.myapplication.adapter.MensajeAdapter;
+import com.example.myapplication.model.Mensaje;
 import java.util.ArrayList;
 import java.util.List;
+import com.example.myapplication.R;
 public class ChatActivity extends AppCompatActivity {
     // Identificador del usuario actual (simulado)
     private static final String CURRENT_USER_ID = "usuario_propio";

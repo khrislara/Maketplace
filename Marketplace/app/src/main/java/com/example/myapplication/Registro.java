@@ -1,4 +1,4 @@
-
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
+import com.example.myapplication.R;
 public class Registro extends AppCompatActivity {
     private TextInputEditText etNombre;
     private TextInputEditText etEmail;
@@ -55,8 +56,7 @@ public class Registro extends AppCompatActivity {
             etEmail.setError("Ingrese un email válido.");
             return false;
         }
-        // 3. Validación de Contraseña (Mínimo 6 caracteres, requisito de Firebase y buena
-        práctica)
+        // 3. Validación de Contraseña (Mínimo 6 caracteres, requisito de Firebase y buena práctica)
         if (TextUtils.isEmpty(password) || password.length() < 6) {
             etPassword.setError("La contraseña debe tener al menos 6 caracteres.");
             return false;

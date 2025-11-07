@@ -1,4 +1,5 @@
 package com.example.myapplication.adapter;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -9,9 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Toast;
-import com.myapplication.marketplace.Detalle_Producto;
-import com.myapplication.marketplace.R;
-import com.myapplication.marketplace.model.Producto;
+import com.diegodev.marketplace.Detalle_Producto;
+import com.diegodev.marketplace.R;
+import com.diegodev.marketplace.model.Producto;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;

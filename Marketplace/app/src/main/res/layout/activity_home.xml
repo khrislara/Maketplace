@@ -52,7 +52,7 @@
         android:clipToPadding="false"
         android:layout_marginBottom="88dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:listitem="@layout/activity_item_producto" />
+        tools:listitem="@layout/item_producto" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"

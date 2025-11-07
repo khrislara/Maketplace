@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="32dp"
     android:background="@color/white"
-    tools:context=".RegistroActivity">
+    tools:context=".Registro">
     <!-- Guía Horizontal para centrar el formulario (Ajustada al 25% para mejor
    espacio) -->
     <androidx.constraintlayout.widget.Guideline

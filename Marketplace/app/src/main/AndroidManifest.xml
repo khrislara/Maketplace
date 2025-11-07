@@ -1,71 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.marketplace">
-    <!-- Permisos necesarios -->
+    package="com.example.myapplication">
+
+    <!-- Permisos -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /> <!-- READ_EXTERNAL_STORAGE solo es necesario para Android 12 o inferior -->
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="MarketPlace"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Marketplace24">
+        android:theme="@style/Theme.MyApplication">
+
+
         <activity
-            android:name=".ProductoAdaptador"
-            android:exported="false" />
-        <activity
-            android:name=".AdapterProducto"
-            android:exported="false" />
-        <activity
-            android:name=".ProductoAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".Detalle_Producto"
-            android:exported="false" />
-        <activity
-            android:name=".model.RegistroActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Registro"
-            android:exported="false" />
-        <activity
-            android:name=".registro"
-            android:exported="false" /> <!-- Actividad principal (Login) -->
-        <activity
-            android:name=".LoginActivity"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Registro de usuario -->
-        <activity
-            android:name=".RegistroActivity"
-            android:exported="true" /> <!-- Pantalla principal con lista de productos -->
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true" /> <!-- Detalle de producto -->
-        <activity
-            android:name=".DetalleProductoActivity"
-            android:exported="true" /> <!-- Publicar nuevo producto -->
-        <activity
-            android:name=".PublicarActivity"
-            android:exported="true" /> <!-- Actividad auxiliar si la usas -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CuentaActivity"
-            android:exported="false" />
-    </application>
+        </activity>
 
+        <activity android:name=".Registro" />
+        <activity android:name=".Home" />
+        <activity android:name=".Publicar" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".AnunciosActivity" />
+        <activity android:name=".CuentaActivity" />
+        <activity android:name=".Detalle_Producto" />
+
+
+    </application>
 </manifest>

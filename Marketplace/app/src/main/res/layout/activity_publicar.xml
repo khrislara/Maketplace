@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PublicarActivity">
+    tools:context=".Publicar">
     <!-- AppBarLayout contiene la Toolbar para el título -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -60,8 +60,7 @@ producto" />
                         android:textColor="@android:color/white"
                         android:backgroundTint="?attr/colorAccent"/>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView
-                <!-- Campo de Entrada: Nombre del Producto -->
+            </androidx.cardview.widget.CardView>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

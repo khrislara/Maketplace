@@ -1,4 +1,5 @@
-package com.myapplication.marketplace;
+package com.example.myapplication;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,13 +13,13 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.myapplication.marketplace.adapter.ProductoAdapter;
-import com.myapplication.marketplace.model.Producto;
+import com.example.myapplication.adapter.ProductoAdapter;
+import com.example.myapplication.model.Producto;
 import java.util.ArrayList;
 import java.util.List;
-import com.diegodev.marketplace.R;
+import com.example.myapplication.R;
 // SE ELIMINA 'implements SearchView.OnQueryTextListener'
-// La implementación se hace de forma anónima en el método configurarBuscador() (SEMANA5)
+// La implementación se hace de forma anónima en el método configurarBuscador() (SEMANA 5)
 public class Home extends AppCompatActivity {
     // Vistas principales
     private RecyclerView recyclerView;
@@ -41,13 +42,38 @@ public class Home extends AppCompatActivity {
         searchViewProductos = findViewById(R.id.search_view_productos);
         // --- SEMANA 4: Inicialización del Bottom Nav (con Toast)
         bottomNav = findViewById(R.id.bottom_navigation_view);
+        // SEMANA 6: Aseguramos que el ítem 'Inicio' esté seleccionado por defecto
+        MenuItem homeItem = bottomNav.getMenu().findItem(R.id.navigation_home);
+        if (homeItem != null) {
+            homeItem.setChecked(true);
+        }
         bottomNav.setLabelVisibilityMode(NavigationBarView.LABEL_VISIBILITY_LABELED);
         bottomNav.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            // SEMANA 5.1: Manejar la navegación a la pantalla de Cuenta
-            if (itemId == R.id.navigation_account) {
-                Intent intent = new Intent(Home.this, CuentaActivity.class);
+            Intent intent;
+            // SEMANA 6.1: Manejar la navegación a la pantalla de Chats
+            if (itemId == R.id.navigation_chats) {
+                // Al presionar el botón de Chat, navegamos a ChatActivity
+                Toast.makeText(Home.this, "Abriendo Chats (Semana 6.1)",
+                        Toast.LENGTH_SHORT).show();
+                intent = new Intent(Home.this, ChatActivity.class);
                 startActivity(intent);
+                return true;
+            }
+            // SEMANA 5.1: Manejar la navegación a la pantalla de Cuenta
+            else if (itemId == R.id.navigation_account) {
+                intent = new Intent(Home.this, CuentaActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            // SEMANA 6: Manejar la navegación a la pantalla de Anuncios
+            else if (itemId == R.id.navigation_ads) {
+                intent = new Intent(Home.this, AnunciosActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            // SEMANA 6: Si presionamos Home, no hacemos nada (ya estamos aquí)
+            else if (itemId == R.id.navigation_home) {
                 return true;
             }
             // Revertido a la lógica de Toast temporal (para otros ítems)
@@ -55,7 +81,7 @@ public class Home extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             return true;
         });
-        // --- FIN SEMANA 4 ---
+        // --- FIN SEMANA 6.1 (SE INCLUYÓ EN EL LISTENER EXISTENTE) ---
         // 2. Configuración CLAVE del RecyclerView
         configurarRecyclerView();
         // SEMANA 5: Configuración del Listener del Buscador para escuchar los cambios de texto
@@ -150,35 +176,3 @@ public class Home extends AppCompatActivity {
         finish();
     }
 }
-        Debemos modifica los archivos themes para aplicar estilos a las estiquetas de nuestra vista
-        activity_cuenta.xml que se encuentran en la siguiente ruta: res-> values -> themes -> themes.xml y
-themes.xml(night)
-<resources xmlns:tools="http://schemas.android.com/tools">
- <!-- Base application theme. -->
- <style name="Base.Theme.MarketPlaces" parent="Theme.Material3.DayNight.NoActionBar">
- </style>
- <style name="Theme.MarketPlaces" parent="Base.Theme.MarketPlaces" />
- <!-- Estilo para las etiquetas (Nombres, Email, etc.) -->
- <style name="PerfilLabel">
- <item name="android:layout_width">0dp</item>
- <item name="android:layout_height">wrap_content</item>
- <item name="android:layout_columnWeight">0.3</item>
- <item name="android:textSize">16sp</item>
- <item name="android:textStyle">bold</item>
- <item name="android:paddingTop">4dp</item>
- <item name="android:paddingBottom">4dp</item>
- </style>
- <!-- Estilo para los valores (Prueba Prueba, Prueba@gmail.com, etc.) -->
- <style name="PerfilValor">
- <item name="android:layout_width">0dp</item>
- <item name="android:layout_height">wrap_content</item>
- <item name="android:layout_columnWeight">0.7</item>
- <item name="android:textSize">16sp</item>
- <item name="android:textColor">@android:color/darker_gray</item>
- <item name="android:gravity">end</item>
- <!-- CORRECCIÓN: Usamos paddingTop y paddingBottom en lugar de paddingVertical para
-        compatibilidad con API < 26 -->
- <item name="android:paddingTop">4dp</item>
- <item name="android:paddingBottom">4dp</item>
- </style>
-</resources>

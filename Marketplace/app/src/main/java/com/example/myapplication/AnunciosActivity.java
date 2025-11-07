@@ -9,8 +9,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.diegodev.marketplace.adapter.ProductoAdapter;
-import com.diegodev.marketplace.model.Producto;
+import com.example.myapplication.adapter.ProductoAdapter;
+import com.example.myapplication.model.Producto;
+import com.example.myapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 public class AnunciosActivity extends AppCompatActivity {
@@ -81,8 +82,7 @@ public class AnunciosActivity extends AppCompatActivity {
                 "url_ficticia_1"));
         lista.add(new Producto("ID002", "Auriculares Inalámbricos", "Cancelación de ruido activa.",
                 "75.990", "url_ficticia_2"));
-        lista.add(new Producto("ID003", "Libro: El Señor de los Anillos", "Edición de lujo tapa
-                dura.", "29.990", "url_ficticia_3"));
+        lista.add(new Producto("ID003", "Libro: El Señor de los Anillos", "Edición de lujo tapa dura.", "29.990", "url_ficticia_3"));
         lista.add(new Producto("ID004", "Teclado Mecánico RGB", "Switches marrones, 60%.",
                 "55.000", "url_ficticia_4"));
         lista.add(new Producto("ID005", "Silla de Oficina Ergonómica", "Soporte lumbar ajustable.",

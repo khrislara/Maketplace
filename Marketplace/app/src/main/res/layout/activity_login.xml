@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    tools:context=".LoginActivity">
+    tools:context=".Login">
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="48dp"
-        android:src="@drawable/LoginBlue"
+        android:src="@drawable/login_blue"
         android:contentDescription="Logo de Marketplace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

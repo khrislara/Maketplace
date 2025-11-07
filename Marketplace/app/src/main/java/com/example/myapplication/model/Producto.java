@@ -1,4 +1,4 @@
-package model;
+package com.example.myapplication.model;
 
 public class Producto {
     private String id;

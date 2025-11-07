@@ -1,4 +1,4 @@
-
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.util.Patterns;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.myapplication.R;
 import com.google.android.material.textfield.TextInputEditText;
 public class Login extends AppCompatActivity {
     private TextInputEditText etEmail;
@@ -35,8 +36,7 @@ public class Login extends AppCompatActivity {
             }
         });
         // B. Navegación a la pantalla de Registro
-        tvIrRegistro.setOnClickListener(v -> irARegistro()); // <-- MODIFICACIÓN SEMANA 3: Uso de
-        método auxiliar
+        tvIrRegistro.setOnClickListener(v -> irARegistro()); // <-- MODIFICACIÓN SEMANA 3: Uso de método auxiliar
     }
     //MODIFICACION3: Se añade la función de validación de campos
     private boolean validarCampos() {
