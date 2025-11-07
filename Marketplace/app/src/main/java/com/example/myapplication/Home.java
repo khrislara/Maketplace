@@ -135,8 +135,7 @@ public class Home extends AppCompatActivity {
                 "url_ficticia_1"));
         lista.add(new Producto("ID002", "Auriculares Inalámbricos", "Cancelación de ruido activa.",
                 "75.990", "url_ficticia_2"));
-        lista.add(new Producto("ID003", "Libro: El Señor de los Anillos", "Edición de lujo tapa
-                dura.", "29.990", "url_ficticia_3"));
+        lista.add(new Producto("ID003", "Libro: El Señor de los Anillos", "Edición de lujo tapa dura.", "29.990", "url_ficticia_3"));
         lista.add(new Producto("ID004", "Teclado Mecánico RGB", "Switches marrones, 60%.",
                 "55.000", "url_ficticia_4"));
         lista.add(new Producto("ID005", "Silla de Oficina Ergonómica", "Soporte lumbar ajustable.",

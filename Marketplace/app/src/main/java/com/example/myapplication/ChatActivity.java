@@ -123,14 +123,11 @@ public class ChatActivity extends AppCompatActivity {
     private List<Mensaje> cargarMensajesDePrueba() {
         List<Mensaje> mensajes = new ArrayList<>();
         // Mensaje del OTRO usuario (izquierda)
-        mensajes.add(new Mensaje("m1", "DiegoDev_id", "¡Hola! ¿Aún tienes la bicicleta a la
-                venta?", System.currentTimeMillis() - 600000));
+        mensajes.add(new Mensaje("m1", "DiegoDev_id", "¡Hola! ¿Aún tienes la bicicleta a la venta?", System.currentTimeMillis() - 600000));
                 // Mensaje del USUARIO PROPIO (derecha)
-                mensajes.add(new Mensaje("m2", CURRENT_USER_ID, "Sí, claro. Está en excelente
-                        estado.", System.currentTimeMillis() - 300000));
+                mensajes.add(new Mensaje("m2", CURRENT_USER_ID, "Sí, claro. Está en excelente estado.", System.currentTimeMillis() - 300000));
                         // Mensaje del OTRO usuario (izquierda)
-                        mensajes.add(new Mensaje("m3", "DiegoDev_id", "¿Podrías enviarme más fotos de los
-                                detalles? ¿Y dónde podría recogerla?", System.currentTimeMillis() - 120000));
+                        mensajes.add(new Mensaje("m3", "DiegoDev_id", "¿Podrías enviarme más fotos de los detalles? ¿Y dónde podría recogerla?", System.currentTimeMillis() - 120000));
         return mensajes;
     }
 }
